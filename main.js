@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fecha objetivo: 17 de agosto del año actual
     const now = new Date();
     const year = now.getFullYear();
-    const targetDate = new Date(year, 7, 17, 0, 0, 0); // Mes 7 = agosto (0-indexado)
+    const targetDate = new Date(year, 7, 17, 9, 30, 0); // 17 de agosto a las 9:30 (Mes 7 = agosto, 0-indexado)
     // Si la fecha ya pasó este año, usar el próximo año
     if (now > targetDate) {
         targetDate.setFullYear(year + 1);
