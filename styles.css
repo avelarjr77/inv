@@ -194,3 +194,12 @@ footer {
     background: #870925;
     color: #fff;
 }
+
+ @media (max-width: 500px) {
+    .countdown-table-wrapper > div {
+        gap: 0.5em !important;
+    }
+    .countdown-table-wrapper > div > div {
+        margin-bottom: 0.7em;
+    }
+}
