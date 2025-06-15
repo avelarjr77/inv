@@ -165,7 +165,7 @@ footer {
 
 @media (max-width: 600px) {
     .invitation-container {
-        padding: 20px 6px;
+        padding: 0px 6px;
         max-width: 98vw;
     }
     header h1 {
@@ -205,15 +205,44 @@ footer {
 }
 
  @media (max-width: 600px) {
-            .header-responsive {
-                min-height: 280px !important;
-                padding: 1em 0.3em !important;
-                background-size: cover !important;
-            }
-            .header-responsive h1 {
-                font-size: 2.3em !important;
-            }
-            .header-responsive .amp {
-                font-size: 1.1em !important;
-            }
-        }
+    .header-responsive {
+        min-height: 280px !important;
+        padding: 1em 0.3em !important;
+        background-size: cover !important;
+    }
+    .header-responsive h1 {
+        font-size: 2.3em !important;
+    }
+    .header-responsive .amp {
+        font-size: 1.1em !important;
+    }
+}
+
+.img-itinerary {
+    margin-top: 0.5em;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.itinerary > section {
+    flex: 1 1 0;
+}
+
+
+@media (max-width: 600px) {
+    .img-itinerary {
+        margin-top: 0.5em;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: 170px !important;
+        margin: -3.5em 0 0 -3.5em !important;
+        
+    }
+}
+
+
