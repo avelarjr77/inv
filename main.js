@@ -2,23 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.scrollTo(0, 0);
 
-    // Envío del formulario de RSVP
-    const form = document.getElementById('rsvp-form');
-    const msg = document.getElementById('rsvp-msg');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            msg.textContent = '¡Gracias por confirmar! Nos vemos en la boda 💜';
-            form.reset();
-        });
-    }
-
-    // Reproducir el audio automáticamente al cargar la página
-    const audio = document.getElementById('wedding-audio');
-    if (audio) {
-        audio.play().catch(() => {});
-    }
-
+logAfterOneMillisecond();
 
     // Animación extra: efecto de resplandor en el título al pasar el mouse
     const header = document.querySelector('header h1');
@@ -68,3 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 });
+
+function playAudioOnce() {
+    const audio = document.getElementById("wedding-audio");
+    if (audio) {
+        audio.play().then(() => {
+            console.log("Audio reproducido correctamente.");
+        }).catch((err) => {
+            console.warn("Fallo al reproducir audio:", err);
+        });
+    }
+    document.removeEventListener('click', playAudioOnce);
+}
+
+function logAfterOneMillisecond() {
+    setTimeout(() => {
+        console.log('Ha pasado un milisegundo desde que se abrió o recargó la página.');
+        document.addEventListener('click', playAudioOnce);
+    }, 1);
+}
